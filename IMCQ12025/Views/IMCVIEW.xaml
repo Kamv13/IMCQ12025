@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="IMCQ12025.Views.IMCVIEW"
-             Title="IMCVIEW">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             x:Class="IMCQ12025.Views.IMCView"
+             xmlns:viewModel="clr-namespace:IMCQ12025.ViewModels"
+             x:DataType="viewModel:IMCViewModel"
+
+             Title="IMCView">
+    <VerticalStackLayout Padding="20" Spacing="5">
+        <Label Text="Ingrese el peso:(kg)" />
+        <Entry Text="{Binding Peso}" Keyboard="Numeric" />
+
+        <Label Text="Ingrese la estatura (m)" />
+        <Entry Text="{Binding Estatura}" Keyboard="Numeric" />
+
+        <Label Text="IMC" />
+        <Entry Text="{Binding Imc}" IsReadOnly="True" />
+
+        <Label Text="Rango" />
+        <Entry Text="{Binding Rango}" IsReadOnly="True" />
+
+        <Button Text="Calcular" BackgroundColor="Green" Command="{Binding CalcularCommand}"/>
+        <Button Text="limpiar" BackgroundColor="Red" Command="{Binding LimpiarCommand}"/>
+
+
     </VerticalStackLayout>
 </ContentPage>

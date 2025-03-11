@@ -8,7 +8,7 @@ namespace IMCQ12025
         {
             InitializeComponent();
 
-            MainPage = new IMCVIEW();
+            MainPage = new IMCView();
         }
     }
 }
