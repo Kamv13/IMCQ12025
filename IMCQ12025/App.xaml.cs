@@ -1,4 +1,6 @@
-﻿namespace IMCQ12025
+﻿using IMCQ12025.Views;
+
+namespace IMCQ12025
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new IMCVIEW();
         }
     }
 }
